@@ -37,7 +37,7 @@ Save the file on the Acme board microSD then uncompress it by typing:
 ~# tar -xvzf mjpg-streamer.tar.gz
 ~# cd mjpg-streamer
 ~/mjpg-streamer#
-Install†make,†libjpeg-dev†and†libv4l-dev†libraries:
+Install¬†make,¬†libjpeg-dev¬†and¬†libv4l-dev¬†libraries:
 ~/mjpg-streamer# apt-get update
 ~/mjpg-streamer# apt-get install make
 ~/mjpg-streamer# apt-get install libjpeg-dev
@@ -50,9 +50,9 @@ If you get this error:
 .. fatal error: linux/videodev.h: No such file or directory
 Create a soft link to /usr/include/linux/videodev2.h
 ~/mjpg-streamer# ln -s /usr/include/libv4l1-videodev.h /usr/include/linux/videodev.h
-Comment also the following line in the†Makefile:
+Comment also the following line in the¬†Makefile:
 # PLUGINS += input_gspcav1.so
-If at run time it still doesn't work verify, using†make menuconfig†that that the†USB Video Class†is enabled in the Kernel :
+If at run time it still doesn't work verify, using¬†make menuconfig¬†that that the¬†USB Video Class¬†is enabled in the Kernel :
 Device Drivers  --->
     <*> Multimedia support  ---> 
         [*]   Media USB Adapters  --->
@@ -70,11 +70,11 @@ MJPG Streamer Version.: 2.0
  o: commands..........: enabled
 
 CONFIGURATION
-Under ë/Home/pií  location copy 
+Under ‚Äò/Home/pi‚Äô  location copy 
 Files: robotweb.py
 	R2D2.mp3
 Folders: Templates and all its content And static folder and its content.
-Add following lines to ì/etc/rc.localî, this will help run robotweb up on raspberry pi after reboot reboot. 
+Add following lines to ‚Äú/etc/rc.local‚Äù, this will help run robotweb up on raspberry pi after reboot reboot. 
 /home/pi/Templates/pigpio.sh &
 /home/pi/Templates/streamer.sh &
 python /home/pi/robotweb.py &
