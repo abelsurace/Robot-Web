@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>TANKY the WebRobot</title>
+
+  <!-- Bootstrap -->
+
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/bootstrap-slider.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/mystyle.css') }}" rel="stylesheet">
+    <!--
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-slider.css" rel="stylesheet">
+  <link href="css/mystyle.css" rel="stylesheet">
+    -->
+
+    </head>
+    <body class=bodycontainer>
+      <div class="container">
+
+  <center>
+  <div class=white-text >
+        <img src="{{ url_for('static', filename='images/tanky.png') }}" width="75">  WEB CONTROLED ROBOT</img>
+    </div>
+      <img src="http://169.254.45.74:5002/?action=stream" width="150"/><!--CHANGE IP ADDRES ACCORDINGLY-->
+      <h4 class=white-text > Obstacle distance in cm:<h4 class=white-text id=distance>NA</h4></h4>
+      <h4 class=white-text > PREDEFINED PHRASES:</h4>
+      <input class="btn btn-default" id="sendTextBtn1" value="R2D2" onclick="R2D2()">
+      <input class="btn btn-default"c id="sendTextBtn1" value="YES" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn2" value="NO" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn3" value="HELLO" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn4" value="HOW ARE YOU" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn5" value="WHAT IS YOUR NAME" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn6" value="MY NAME IS S3E3" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn7" value="ARE YOU HAVING FUN" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn7" value="AT THE MAKER FAIR" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn8" value="SMILE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn9" value="YOU" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn10" value="ARE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn11" value="IN" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn12" value="MY CAMERA" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn13" value="I DON'T KNOW" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn14" value="ASK YOUR MOM" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn15" value="I LOVE RASPBERRY PIE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn16" value="MY FAVORITE COLOUR" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn17" value="IS" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn18" value="ORANGE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn19" value="AND" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn20" value="GREEN" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn21" value="I LIKE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn22" value="YOUR" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn23" value="SHOES" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn24" value="HAT" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn25" value="DRESS" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn26" value="WHY" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn27" value="WHEN" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn28" value="HOW" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn29" value="IS" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn30" value="ALWAYS" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn31" value="PERHAPS" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn32" value="I HAVE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn33" value="IDEA" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn34" value="I AM SORRY" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn34" value="DAVE" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn34" value="I AM AFRAID" onclick="sendText(this.value)">
+      <input class="btn btn-default" id="sendTextBtn34" value="I CAN'T DO THAT" onclick="sendText(this.value)">
+      <br>
+     <form action="/">
+        <input class="btn btn-default" id="sendTextBtn34" type="submit" value="<<<" />
+     </form>
+</center>
+          <!-- 
+          <!-- core JavaScript
+          ================================================== -->
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+          <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/bootstrap-slider.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+
+          <!-- 
+          <script src="js/jquery-3.2.1.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/bootstrap-slider.js"></script>
+          <script src="js/myscript.js"></script>
+          -->
+        </div>
+      </body>
+</html>
